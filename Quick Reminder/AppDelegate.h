@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

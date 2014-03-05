@@ -7,12 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "QRInput.h"
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    QRInput *userInput = [[QRInput alloc] initWithTestValues];
+    
+    NSLog(@"User input date is %@", userInput.userDate);
+    
+    NSDate *realDate = [NSDate dateWithNaturalLanguageString:userInput.userDate];
+    NSLog(@"Detected date is %@", realDate);
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    
+    
 }
 
 @end
